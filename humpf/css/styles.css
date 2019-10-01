@@ -1,11 +1,3 @@
-#first{
+.container{
 	border: 1px solid black;
-	height: 500px;
-	width: 500px;
-}
-
-#second{
-	border: 1px dashed red;
-	height: 250px;
-	width: 250px;
 }
