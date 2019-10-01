@@ -1,29 +1,11 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-.marg-bot{
-	margin-bottom: 5%;
-}
-
-#masterwrapper{
-	border: 1px solid red;
-}
-
-#title{
-	border: 1px solid black; 
-}
-
-#nav{
-	border: 1px solid green;
-}
-
-#contentwrapper{
-	border: 1px solid blue;
-}
-
-#footer{
+#first{
 	border: 1px solid black;
+	height: 500px;
+	width: 500px;
+}
+
+#second{
+	border: 1px dashed red;
+	height: 250px;
+	width: 250px;
 }
