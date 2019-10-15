@@ -15,12 +15,23 @@
 	    <script src="js/scripts.js" defer></script>   
 	</head>
 	<body>
-	<div class="container border border-primary">
+	
+	<div id="modal">
+	<span id="modalclose" class="close exit">&times;</span>
+
+	<div id="modalcontentwrapper">
+		<div id="modalcontent">
+		</div>
+	</div>
+
+</div>
+
+	<div id="mastercontainer" class="container border border-primary">
 			<header class="border border-info">
 				<h1>Alan P. Hunt</h1>
 			</header>
 			
-			<nav class="border border-secondary">
+			<nav id="navbar" class="border border-secondary">
 				<ul class="nav">
 					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
@@ -29,8 +40,16 @@
 				</ul>
 			</nav>
 			
+			<nav id="mobilenavbar">
+				<img src="images/menu.png" alt="menu">
+				<span>menu</span>
+			</nav>
+			
 			<div class="border border-danger">
-				<p>Main content goes here.</p>
+				<p>
+				<img id="me" src="images/alanhunt.jpg" alt="Alan Hunt">
+				
+				</p>
 			</div>
 			
 			<footer class="border border-dark">

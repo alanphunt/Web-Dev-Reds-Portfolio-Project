@@ -15,5 +15,54 @@ p, span{
 }
 
 p{
-	color: green;
+	color: black
+}
+
+#mastercontainer{
+	position: relative;
+}
+
+#mobilenavbar{
+	display: none;
+}
+
+@media only screen and (max-width: 768px){
+#navbar{
+	display: none;
+}
+
+#mobilenavbar{
+	display: block;
+	position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+}
+
+#mobilemenucontainer, #modal{
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.85);
+	padding: 1.5% 10%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	-ms-scroll-chaining: none;
+	overscroll-behavior: contain;
+	color: #fff;
+}
+
+#modal{
+	overflow-y: scroll;
+	padding: 1.5% 0;
+}
+
+#modal > .close{
+	position: sticky;
+	float: right;
+	line-height: 2rem;
+	margin-right: 2%;
 }
