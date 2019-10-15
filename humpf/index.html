@@ -10,21 +10,36 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	           
 	    <link href="css/styles.css" rel="stylesheet" type="text/css">
+	    <link href="css/modal.css" rel="stylesheet" type="text/css">
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	    
 	    <script src="js/scripts.js" defer></script>   
 	</head>
 	<body>
-	
-	<div id="modal">
-	<span id="modalclose" class="close exit">&times;</span>
 
-	<div id="modalcontentwrapper">
-		<div id="modalcontent">
+	<div id="mobilemenucontainer">
+		<span class="closer exit">x</span>
+		
+		<div id="mobileheader">
+			<a href="index.html"><img src="images/alanhunt.jpg" alt="Alan Hunt"></a>
 		</div>
-	</div>
+		
+			<nav id="mobilemenu">
+				<ul>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+			</nav>
 
-</div>
+		<div id="mobilecontact">
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+			<a href="#">Link</a>
+		</div>
+
+	</div>
 
 	<div id="mastercontainer" class="container border border-primary">
 			<header class="border border-info">
@@ -40,21 +55,20 @@
 				</ul>
 			</nav>
 			
-			<nav id="mobilenavbar">
+			<nav class="mobilemenutrigger" id="mobilenavbar">
 				<img src="images/menu.png" alt="menu">
 				<span>menu</span>
 			</nav>
 			
 			<div class="border border-danger">
 				<p>
-				<img id="me" src="images/alanhunt.jpg" alt="Alan Hunt">
-				
+					<img id="me" src="images/alanhunt.jpg" alt="Alan Hunt">
 				</p>
 			</div>
 			
 			<footer class="border border-dark">
 				<p>Footer stuff here.</p>
 			</footer>
-			</div>
+		</div>
 	</body>
 </html>
