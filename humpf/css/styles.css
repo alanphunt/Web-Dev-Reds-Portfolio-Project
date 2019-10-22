@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700|Yantramanav:100,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700|Yantramanav:100,300,700&display=swap');
 
 *{
 	margin: 0;
@@ -12,6 +12,10 @@ html{
 
 h1, h2, h3{
 	font-family: 'Yantramanav', sans-serif;
+	color: #996666;
+	margin-bottom: 0;
+	display: inline-block;
+	font-weight: 300;
 }
 
 p, span{
@@ -20,16 +24,28 @@ p, span{
 
 a{
 	text-decoration: none !important;
+	color: #696969;
+	transition: .3s ease;
+}
+
+a:hover{
+	color: #000000;	
 }
 
 ul{
 	list-style: none;
 }
 
+hr{
+	width: 75%;
+	border-bottom: 1px solid grey;
+	margin-top: 0;
+}
+
 #mastercontainer{
 	position: relative;
 }
-
+	
 .nav-link:first-child{
 	padding-left: 0;
 }
@@ -42,15 +58,12 @@ footer{
 	text-align: center;
 }
 
-hr{
-	width: 75%;
-	border-bottom: 1px solid grey;
-}
-
-nav{
+#navbar{
 	border-bottom: 1px solid grey;
 	margin-bottom: 1rem;
 }
+
+
 
 @media only screen and (max-width: 768px){
 	
@@ -59,10 +72,10 @@ nav{
 }
 
 #mobilenavbar{
-	display: block;
-	position: absolute;
+	display: inline-block;
+	position: sticky;
     top: 10px;
-    right: 20px;
+    float: right;
     cursor: pointer;
     transition: .3s ease;
 }
@@ -71,5 +84,10 @@ nav{
 	color: red;
 }
 
+header{
+	position: sticky;
+	top: 0;
+	background-color: white;
+} 
 }
 

@@ -1,6 +1,7 @@
 window.onload = function() {
 	document.getElementsByClassName("mobilemenutrigger")[0].addEventListener("click", mobileMenuFunc);
 	document.getElementsByClassName("exit")[0].addEventListener("click", closeFunc);
+	document.getElementById("mobilemenu").addEventListener("click", closeFunc);
 }
 
 function mobileMenuFunc() {
