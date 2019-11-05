@@ -17,22 +17,26 @@ function closeFunc() {
 	document.body.style.overflow = "visible";
 }
 
-window.onload = function(){	education.className = "fadeRightClass";};
+window.onload = function(){
+	document.getElementById("hero").className = "fadeinClass";
+};
 
 window.onscroll = function(){
-	var education = document.getElementById("education");
-	var proficiencies = document.getElementById("proficiencies");
+	var proficiencies = document.getElementById("proficiencies");	
 	var work = document.getElementById("workhistory");
 	var projects = document.getElementById("projects");
 	
+	if(window.pageYOffset >= education.offsetTop + 250)
+		education.className = "fadeRightClass";
 	
-	if(window.pageYOffset >= (proficiencies.offsetTop-window.innerHeight) + 250)
-		proficiencies.className = "fadeLeftClass";
-	
-	if(window.pageYOffset >= (work.offsetTop-window.innerHeight) + 300)
+	if(window.pageYOffset >= proficiencies.offsetTop + 250){
+		//proficiencies.className = "fadeLeftClass";
+		proficiencies.style.animation = "fadeInLeft 1s ease 0s normal 1 forwards";
+	}
+
+	if(window.pageYOffset >= work.offsetTop + 250)
 		work.className = "fadeRightClass";
 	
-	if(window.pageYOffset >= (projects.offsetTop-window.innerHeight) + 350)
+	if(window.pageYOffset >= projects.offsetTop + 250)
 		projects.className = "fadeLeftClass";
-	
 };
