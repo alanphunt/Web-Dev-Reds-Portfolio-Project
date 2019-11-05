@@ -16,3 +16,23 @@ function closeFunc() {
 	mobile.style.display = "none";
 	document.body.style.overflow = "visible";
 }
+
+window.onload = function(){	education.className = "fadeRightClass";};
+
+window.onscroll = function(){
+	var education = document.getElementById("education");
+	var proficiencies = document.getElementById("proficiencies");
+	var work = document.getElementById("workhistory");
+	var projects = document.getElementById("projects");
+	
+	
+	if(window.pageYOffset >= (proficiencies.offsetTop-window.innerHeight) + 250)
+		proficiencies.className = "fadeLeftClass";
+	
+	if(window.pageYOffset >= (work.offsetTop-window.innerHeight) + 300)
+		work.className = "fadeRightClass";
+	
+	if(window.pageYOffset >= (projects.offsetTop-window.innerHeight) + 350)
+		projects.className = "fadeLeftClass";
+	
+};

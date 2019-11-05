@@ -65,7 +65,6 @@
 }
 
 .fadeinClass{
-	opacity: 0;
-	animation: fadein .5s ease .1s 1 normal forwards;
+	animation: fadein .5s ease 0s 1 normal forwards;
 	z-index: 1;
 }
