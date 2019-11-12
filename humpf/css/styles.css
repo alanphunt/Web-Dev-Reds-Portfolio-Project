@@ -41,6 +41,13 @@ hr{
 	position: relative;
 }
 	
+header{
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+} 
+
 .nav-link:first-child{
 	padding-left: 0;
 }
@@ -121,11 +128,6 @@ footer{
 	color: red;
 }
 
-header{
-	position: sticky;
-	top: 0;
-	background-color: white;
-} 
 }
 
 html, body{

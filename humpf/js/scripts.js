@@ -2,6 +2,16 @@ window.onload = function() {
 	document.getElementsByClassName("mobilemenutrigger")[0].addEventListener("click", mobileMenuFunc);
 	document.getElementsByClassName("exit")[0].addEventListener("click", closeFunc);
 	document.getElementById("mobilemenu").addEventListener("click", closeFunc);
+	document.getElementById("hero").className = "fadeinClass";
+
+	var links = document.querySelectorAll("nav a");
+	for(let i = 0; i < links.length; i++){
+		links[i].addEventListener("click", function(event){
+			return function(){
+				jsScroll(event);
+				};
+			}(event));
+	}
 }
 
 function mobileMenuFunc() {
@@ -17,9 +27,7 @@ function closeFunc() {
 	document.body.style.overflow = "visible";
 }
 
-window.onload = function(){
-	document.getElementById("hero").className = "fadeinClass";
-};
+
 
 window.onscroll = function(){
 	var proficiencies = document.getElementById("proficiencies");	
@@ -40,3 +48,19 @@ window.onscroll = function(){
 	if(window.pageYOffset >= projects.offsetTop + 250)
 		projects.className = "fadeLeftClass";
 };
+
+function jsScroll(event){
+	var which = this.event.target.getAttribute('href');
+
+	if(which != 'index.html')
+		this.event.preventDefault();
+	
+	var header = document.querySelector("header");
+	var hero = document.getElementById("hero");
+	var what = document.querySelector(which);
+	
+	var howMuch = what.offsetTop - header.offsetHeight + hero.offsetHeight;
+	
+	window.scrollTo(0, howMuch);
+	
+}
