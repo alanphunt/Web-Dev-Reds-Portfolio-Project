@@ -60,6 +60,11 @@ function jsScroll(event){
 	
 	var howMuch = what.offsetTop - header.offsetHeight + hero.offsetHeight;
 	
-	window.scrollTo(0, howMuch);
+	//window.scrollTo(0, howMuch);
+	window.scrollTo({
+		  top: howMuch,
+		  left: 0,
+		  behavior: 'smooth'
+		});
 	
 }
