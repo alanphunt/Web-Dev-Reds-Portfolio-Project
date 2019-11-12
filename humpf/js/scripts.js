@@ -5,12 +5,11 @@ window.onload = function() {
 	document.getElementById("hero").className = "fadeinClass";
 
 	var links = document.querySelectorAll("nav a");
+	console.log(links);
 	for(let i = 0; i < links.length; i++){
 		links[i].addEventListener("click", function(event){
-			return function(){
 				jsScroll(event);
-				};
-			}(event));
+	});
 	}
 }
 
@@ -51,7 +50,7 @@ window.onscroll = function(){
 
 function jsScroll(event){
 	var which = this.event.target.getAttribute('href');
-
+	
 	if(which != 'index.html')
 		this.event.preventDefault();
 	
