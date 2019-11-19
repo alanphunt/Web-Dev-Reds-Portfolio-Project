@@ -50,6 +50,7 @@ header{
 	top: 0;
 	background-color: white;
 	z-index: 1;
+	padding: 0 15px;
 } 
 
 .nav-link:first-child{
@@ -170,6 +171,10 @@ html, body{
 	float: none;
 	margin: 1rem auto;
 	display: block;
+}
+
+body,html{
+	height: auto;
 }
 
 }

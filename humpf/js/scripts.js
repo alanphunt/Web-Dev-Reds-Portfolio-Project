@@ -63,7 +63,8 @@ function jsScroll(event){
 	var howMuch = what.offsetTop - header.offsetHeight + hero.offsetHeight;
 	
 	if(window.innerWidth <= 768)
-		howMuch -= hero.offsetHeight;
+		howMuch = what.offsetTop;
+		//howMuch -= hero.offsetHeight;
 	
 	//window.scrollTo(0, howMuch);
 	window.scrollTo({
