@@ -142,8 +142,9 @@ html, body{
  
 @media (max-width: 768px){
 	
-	#mastercontainer{
+#mastercontainer{
 	padding-bottom: 5px;
+	overflow-x: hidden;
 }
 	
 #navbar{
@@ -175,7 +176,6 @@ html, body{
 
 body,html{
 	height: auto;
-	overflow-x: hidden;
 }
 
 }
