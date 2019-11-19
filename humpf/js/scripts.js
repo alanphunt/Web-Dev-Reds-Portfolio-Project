@@ -1,3 +1,4 @@
+
 window.onload = function() {
 	document.getElementsByClassName("mobilemenutrigger")[0].addEventListener("click", mobileMenuFunc);
 	document.getElementsByClassName("exit")[0].addEventListener("click", closeFunc);
@@ -5,7 +6,7 @@ window.onload = function() {
 	document.getElementById("hero").className = "fadeinClass";
 
 	var links = document.querySelectorAll("nav a");
-	console.log(links);
+
 	for(let i = 0; i < links.length; i++){
 		links[i].addEventListener("click", function(event){
 				jsScroll(event);
@@ -26,25 +27,26 @@ function closeFunc() {
 	document.body.style.overflow = "visible";
 }
 
-
-
 window.onscroll = function(){
 	var proficiencies = document.getElementById("proficiencies");	
 	var work = document.getElementById("workhistory");
 	var projects = document.getElementById("projects");
 	
-	if(window.pageYOffset >= education.offsetTop + 250)
+	var buffer = 250;
+	
+	if(window.innerWidth <= 768)
+		buffer = -350;
+	
+	if(window.pageYOffset >= education.offsetTop + buffer)
 		education.className = "fadeRightClass";
 	
-	if(window.pageYOffset >= proficiencies.offsetTop + 250){
-		//proficiencies.className = "fadeLeftClass";
-		proficiencies.style.animation = "fadeInLeft 1s ease 0s normal 1 forwards";
-	}
-
-	if(window.pageYOffset >= work.offsetTop + 250)
+	if(window.pageYOffset >= proficiencies.offsetTop + buffer)
+		proficiencies.className = "fadeLeftClass";
+	
+	if(window.pageYOffset >= work.offsetTop + buffer)
 		work.className = "fadeRightClass";
 	
-	if(window.pageYOffset >= projects.offsetTop + 250)
+	if(window.pageYOffset >= projects.offsetTop + buffer)
 		projects.className = "fadeLeftClass";
 };
 
@@ -59,6 +61,9 @@ function jsScroll(event){
 	var what = document.querySelector(which);
 	
 	var howMuch = what.offsetTop - header.offsetHeight + hero.offsetHeight;
+	
+	if(window.innerWidth <= 768)
+		howMuch -= hero.offsetHeight;
 	
 	//window.scrollTo(0, howMuch);
 	window.scrollTo({
