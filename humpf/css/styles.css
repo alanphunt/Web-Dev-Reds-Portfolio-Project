@@ -10,6 +10,10 @@ html{
 	scroll-behavior: smooth;	
 }
 
+body{
+		overflow-x: hidden;
+}
+
 h1, h2, h3{
 	font-family: 'Yantramanav', sans-serif;
 	color: #996666;
@@ -136,6 +140,10 @@ html, body{
 
  
 @media (max-width: 768px){
+	
+	#mastercontainer{
+	padding-bottom: 5px;
+}
 	
 #navbar{
 	display: none;
