@@ -45,12 +45,18 @@ hr{
 	position: relative;
 }
 	
+#parent{
+	position: relative;
+}
+	
 header{
 	position: sticky;
 	top: 0;
 	background-color: white;
 	z-index: 1;
 	padding: 0 15px;
+	max-width: 1140px;
+	margin: 0 auto;
 } 
 
 .nav-link:first-child{

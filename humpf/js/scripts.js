@@ -60,12 +60,11 @@ function jsScroll(event){
 	var hero = document.getElementById("hero");
 	var what = document.querySelector(which);
 	
-	var howMuch = what.offsetTop - header.offsetHeight + hero.offsetHeight;
+	var howMuch = what.offsetTop + hero.offsetHeight;
 	
 	if(window.innerWidth <= 768)
 		howMuch = what.offsetTop;
 	
-	//window.scrollTo(0, howMuch);
 	window.scrollTo({
 		  top: howMuch,
 		  left: 0,
